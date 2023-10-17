@@ -41,6 +41,7 @@ Modular linear equations like these are solved using the modular multiplicative 
 For each equation, calculate the modular inverse, **inv**, using **inverse(a, m)**. Then, compute **x[i]** by multiplying **inv** by **b modulo m**. As the flag is represented by the least significant byte of x[i], extract it by taking **x[i] % 256**.
 
 ```python
+
 from Crypto.Util.number import inverse
 import re
 import os
