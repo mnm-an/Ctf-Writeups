@@ -38,7 +38,7 @@ if __name__ == '__main__':
 
 ```
 
-The encryption method uses **AES encryption with ECB mode**. It generates random keys **a** and **b**, encrypts the message, and prints the encrypted message, along with requesting an input from the user, which is also encrypted and printed as **Steve's message**.
+The encryption method uses **AES encryption with ECB mode**. It generates random keys **a** and **b**, encrypts the FLAG, and print it as Alice's message, along with requesting an input from the user, which is also encrypted and printed as **Steve's message**.
 
 Here is a image how **ECB Encryption And Decryption** Work :
 
