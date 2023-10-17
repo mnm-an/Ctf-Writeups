@@ -36,11 +36,11 @@ The flag is a string constructed from the ASCII characters represented by the le
 
 ### Decryption :
 
-Modular linear equations like these are solved using the modular multiplicative inverse.In Python, you can calculate the modular inverse of **a** with respect to **m** using the inverse function from the **Crypto.Util.number module**. The **inverse(a, m)** function calculates the modular inverse of a modulo m. This inverse can then be used to find the solution to the equation. 
+Modular linear equations like these are solved using the modular multiplicative inverse.In Python, you can calculate the modular inverse of **a** with respect to **m** using the inverse function from the **Crypto.Util.number module**. The **inverse(a, m)** function calculates the modular inverse of **a modulo m**. This inverse can then be used to find the solution to the equation. 
 
 For each equation, calculate the modular inverse, **inv**, using **inverse(a, m)**. Then, compute **x[i]** by multiplying **inv** by **b modulo m**. As the flag is represented by the least significant byte of x[i], extract it by taking **x[i] % 256**.
 
-```
+```python
 from Crypto.Util.number import inverse
 import re
 import os
