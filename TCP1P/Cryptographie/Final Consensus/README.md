@@ -62,7 +62,7 @@ To discover **a** and **b** :
 
 If a match is found, it reveals the **MITM value**, leading to the discovery of keys **a** and **b**.
 
-Decryption Code is provided for this MITM attack, where the keys are systematically tested to find the matching pair that decrypts **my_input_encrypted** to reveal **Alice's message (The Flag)**.
+Here is my decryption script, where the keys are systematically tested to find the matching pair that decrypts **my_input_encrypted** to reveal **Alice's message (The Flag)**.
 ```python
 from Crypto.Cipher import AES
 from pwn import xor
