@@ -50,7 +50,7 @@ Here is a image how **ECB Encryption And Decryption** Work :
 ### Decryption Approach :
 
 To reveal the flag, you need to perform a **Meet-in-the-Middle (MITM) attack** .
-the Meet-in-the-Middle (MITM) attack involves finding the correct combination of keys **a** and **b** used for encrypting **my_input**. You can input any message, and it's encrypted first with **a** and then with **b**, resulting the output **my_input_encrypted**. To discover **a** and **b**, you encrypt your plaintext with all possible keys and store the results in **encrypted{}**. Next, you decrypt the **my_input_encrypted** output with all possible keys and store the results in **decrypted{}**. If a match is found, it reveals the **MITM value**, leading to the discovery of keys **a** and **b**.
+the Meet-in-the-Middle (MITM) attack involves finding the correct combination of keys **a** and **b** used for encrypting **my_input**. You can input any message, and it's encrypted first with **a** and then with **b**, resulting the output **my_input_encrypted**. To discover **a** and **b**, you encrypt your plaintext with all possible keys and store the results in **encrypted{}**. Next, you decrypt **my_input_encrypted**  with all possible keys and store the results in **decrypted{}**. If a match is found, it reveals the **MITM value**, leading to the discovery of keys **a** and **b**.
 
 Example code is provided for this MITM attack, where the keys are systematically tested to find the matching pair that decrypts **my_input_encrypted** to reveal **Alice's message (The Flag)**.
 ```python
