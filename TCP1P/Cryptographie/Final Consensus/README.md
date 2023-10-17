@@ -1,7 +1,7 @@
 # Challenge Name: Final Consensus
 ## Category: Cryptography
 
-In the `Final Consensus` challenge, it was part of an online Capture The Flag (CTF) competition. Participants were provided with the source code of a Python program that used the AES encryption algorithm in ECB (Electronic Codebook) mode. This source code was hosted on a Netcat server, allowing participants to both observe Alice's encrypted message and provide their own input for encryption. The goal was to decrypt **Alice's message**, which contained the hidden flag.
+In the `Final Consensus` challenge, it was part of an online Capture The Flag (CTF) competition. Participants were provided with the source code of a Python program that used the AES encryption algorithm in ECB (Electronic Codebook) mode. This source code was hosted on a Netcat server, allowing participants to both observe Alice's encrypted message and provide their own input for encryption. The goal was to decrypt **Alice's message**, which contained the hidden flag. Here is the source code :
 
 ```python
 from Crypto.Cipher import AES
