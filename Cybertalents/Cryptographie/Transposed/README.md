@@ -33,6 +33,7 @@ print(msg)
 ```
 ### Output: L{NTP#AGLCSF.#OAR4A#STOL11__}PYCCTO1N#RS.S
 So we can describe the encryption algorithm as follows: 
+
 **Initialization:**
 
     A permutation of numbers from 0 to 6 is created.
