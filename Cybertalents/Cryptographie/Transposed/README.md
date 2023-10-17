@@ -32,7 +32,25 @@ for i in range(100):
 print(msg)
 ```
 ### Output: L{NTP#AGLCSF.#OAR4A#STOL11__}PYCCTO1N#RS.S
-The encryption algorithm shuffles a tuple of numbers from 0 to 6 **(range(7))** and uses this shuffled tuple to encrypt the flag after shuffling the flag itself.
+So we can describe the encryption algorithm as follows: 
+**Initialization:**
+
+    A permutation of numbers from 0 to 6 is created.
+    The message is loaded from a file and padded with "." characters to ensure its length is a multiple of 14.
+
+**Iterative Transformation (100 iterations):**
+
+    The message is repeatedly transformed through a series of steps:
+        Shuffling of characters by moving the first character to the end, splitting the message into even and odd positions, and shuffling again.
+        Reordering of characters within blocks of size 7 according to the shuffled permutation.
+
+**Output:**
+
+    the transformed message is printed as the final result.
+
+### Decryption Approach : 
+
+My approach is that the decryption script will iterates through all possible permutations of the shuffled tuple, attempting to reverse the encryption process to recover the flag that begins with "FLAG{."
 
 #### `decrypt.py`:
 ```python
@@ -51,13 +69,14 @@ for s in shuffled:
                 res += msg[j:j + W][s.index(k)]
         msg = res
         msg = msg[-1] + msg[:-1]
-        msg = ''.join([msg[i // 2] if i % 2 == 0 else msg[len(msg) // 2 + i // 2] for i in range len(msg)])
+        msg = ''.join([msg[i // 2] if i % 2 == 0 else msg[len(msg) // 2 + i // 2] for i in range(len(msg))])
         msg = msg[-1] + msg[:-1]
 
     if 'FLAG{' in msg:
         print("[+] FLAG FOUND! : ", msg)
         break
 ```
-The decryption script tries all possible permutations of the shuffled tuple and uses the reverse encryption algorithm to find the flag, which starts with "FLAG{". When the flag is found, it prints the result.
 
-Good luck with the challenge!
+It Works ^-^ . ```[+] FLAG FOUND! :  FLAG{##CL4SS1CAL_CRYPTO_TRANSPOS1T1ON##}..```
+
+
