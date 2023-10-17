@@ -54,13 +54,15 @@ the Meet-in-the-Middle (MITM) attack involves finding the correct combination of
 
 To discover **a** and **b** : 
 
-1 - you encrypt your plaintext with all possible keys and store the results in **encrypted{}**.
+1 - you encrypt your plaintext with all possible keys and store the results in **encrypted{}**.  
 
 2 - you decrypt **my_input_encrypted**  with all possible keys and store the results in **decrypted{}**.
 
+```encrypted{}``` and ```decrypted{}``` are dictionaries that store ciphertexts alongside the corresponding encryption or decryption keys, serving as key-value pairs for convenient data storage and retrieval during the Meet-in-the-Middle (MITM) attack.
+
 If a match is found, it reveals the **MITM value**, leading to the discovery of keys **a** and **b**.
 
-Example code is provided for this MITM attack, where the keys are systematically tested to find the matching pair that decrypts **my_input_encrypted** to reveal **Alice's message (The Flag)**.
+Decryption Code is provided for this MITM attack, where the keys are systematically tested to find the matching pair that decrypts **my_input_encrypted** to reveal **Alice's message (The Flag)**.
 ```python
 from Crypto.Cipher import AES
 from pwn import xor
