@@ -42,7 +42,8 @@ The encryption method uses **AES encryption with ECB mode**. It generates random
 
 Here is a image how **ECB Encryption And Decryption** Work :
 
-![alt text](https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.researchgate.net%2Fpublication%2F220566117%2Ffigure%2Ffig1%2FAS%3A276953270636549%401443042213981%2FECB-mode-encryption-and-decryption.png&tbnid=DqQldX7UlazBqM&vet=12ahUKEwjk9Jv_zf2BAxVJsCcCHTi8CogQMygDegQIARBR..i&imgrefurl=https%3A%2F%2Fwww.researchgate.net%2Ffigure%2FECB-mode-encryption-and-decryption_fig1_220566117&docid=P_lmaAXjYZE84M&w=850&h=255&q=ecb%20encryption&client=firefox-b-d&ved=2ahUKEwjk9Jv_zf2BAxVJsCcCHTi8CogQMygDegQIARBR)
+![ECB-mode-encryption-and-decryption](https://github.com/mnm-an/Ctf-Writeups/assets/65871533/c461c1e0-2fc9-4e90-b409-550804de673a)
+
 
 **In ECB encryption, each plaintext block is independently encrypted with the same key. The encryption process involves dividing the input into fixed-size blocks (e.g., 128 bits), and each block is encrypted separately, producing its corresponding ciphertext block. This means that identical plaintext blocks will result in identical ciphertext blocks**.
 
