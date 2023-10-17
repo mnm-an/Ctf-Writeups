@@ -39,7 +39,7 @@ Here is a image how **CBC Encryption And Decryption** Work :
 
 ![CBC-mode-encryption-and-decryption](https://github.com/mnm-an/Ctf-Writeups/assets/65871533/8c993cc0-a310-4978-bbba-a24655f49696)
 
-The script use this AES mode, with random keys and initialization vectors (IVs). The plaintext is read from a flag file and encrypted then xored again with key as ct. 
+The script use this AES mode, with random keys and initialization vectors (IVs). The plaintext is read from the flag file so it will be encrypted using ```encrypt()``` fucntion, then xored again with key and stored in ct variable. 
 
 **However, after analyzing the file, the vulnerability appears in the line** ```ct = pad(cipher.encrypt(pt), 16)```, **where padding is added. After encrypting the ciphertext, the program adds a 16-byte block of padding, which is** ```b'\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10'```. **Since the key size is 16 bytes, we can XOR it back to recover the key.**
 
