@@ -37,11 +37,11 @@ So we can describe the encryption algorithm as follows:
 **Initialization:**
 
     A permutation of numbers from 0 to 6 is created.
-    The flag is loaded from a file and padded with "." characters to ensure its length is a multiple of 14.
+    The flag is loaded from a file and padded with "." characters to ensure its length is a multiple of 14 and stored in msg variable.
 
 **Iterative Transformation (100 iterations):**
 
-    The message is repeatedly transformed through a series of steps:
+    The msg is repeatedly transformed through a series of steps:
         Shuffling of characters by moving the first character to the end, splitting the message into even and odd positions, and shuffling again.
         Reordering of characters within blocks of size 7 according to the shuffled permutation.
 
