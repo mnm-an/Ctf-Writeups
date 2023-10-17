@@ -2,7 +2,7 @@
 ## Category: Cryptography
 ### [Challenge Link](https://cybertalents.com/challenges/cryptography/lineq)
 
-In the "lineq" challenge, you are presented with a set of modular linear equations, each of the form **a * x[i] mod m = b**. The objective is to solve these equations and recover the hidden flag, where **x[i]** is an unknown variable. Below, we outline the provided file:
+In the `lineq` challenge, you are presented with a set of modular linear equations, each of the form **a * x[i] mod m = b**. The objective is to solve these equations and recover the hidden flag, where **x[i]** is an unknown variable. Below, we outline the provided file:
 ```
 15345857135052644158 * x[0] mod 15914389274045831441 = 10753153698913165324
 10107862342967460188 * x[1] mod 12471333000718257439 = 8412981602133999892
@@ -36,7 +36,7 @@ The flag is a string constructed from the ASCII characters represented by the le
 
 ### Decryption :
 
-Modular linear equations like these are solved using the modular multiplicative inverse.In Python, you can calculate the modular inverse of a with respect to m using the inverse function from the Crypto.Util.number module. The **inverse(a, m)** function calculates the modular inverse of a modulo m. This inverse can then be used to find the solution to the equation. 
+Modular linear equations like these are solved using the modular multiplicative inverse.In Python, you can calculate the modular inverse of **a** with respect to **m** using the inverse function from the **Crypto.Util.number module**. The **inverse(a, m)** function calculates the modular inverse of a modulo m. This inverse can then be used to find the solution to the equation. 
 
 For each equation, calculate the modular inverse, **inv**, using **inverse(a, m)**. Then, compute **x[i]** by multiplying **inv** by **b modulo m**. As the flag is represented by the least significant byte of x[i], extract it by taking **x[i] % 256**.
 
