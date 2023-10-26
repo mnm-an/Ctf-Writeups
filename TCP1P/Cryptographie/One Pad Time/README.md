@@ -35,9 +35,6 @@ ct = b'h\x08\xafmDV\xaa\xcd\xea\xe9C\xdd7/\x1fF\xe2?\xcb\xb0\x1d F\xcc\xe5\xa6\x
 
 The program use **AES-CBC mode**, in AES-CBC mode, data is divided into blocks, with each block XORed with the previous ciphertext before encryption. This chaining adds security by preventing patterns and enhancing data integrity during decryption.
 
-Here is a image how **CBC Encryption And Decryption** Work :
-
-![CBC-mode-encryption-and-decryption](https://github.com/mnm-an/Ctf-Writeups/assets/65871533/8c993cc0-a310-4978-bbba-a24655f49696)
 
 The script use this AES mode, with random keys and initialization vectors (IVs). The plaintext is read from the flag file so it will be encrypted using ```encrypt()``` fucntion, then xored again with key and stored in ```ct``` variable. 
 
