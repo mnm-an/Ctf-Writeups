@@ -31,7 +31,9 @@ for i in range(100):
 
 print(msg)
 ```
-### Output: ```L{NTP#AGLCSF.#OAR4A#STOL11__}PYCCTO1N#RS.S```
+### Output: 
+```L{NTP#AGLCSF.#OAR4A#STOL11__}PYCCTO1N#RS.S```
+
 So we can describe the encryption algorithm as follows: 
 
 **Initialization:**
