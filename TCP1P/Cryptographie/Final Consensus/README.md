@@ -40,11 +40,6 @@ if __name__ == '__main__':
 
 The encryption method uses **AES encryption with ECB mode**. It generates random keys **a** and **b**, encrypt the FLAG, and print it as Alice's message, along with requesting an input from the user, which is also encrypted and printed as **Steve's message**.
 
-Here is a image how **ECB Encryption And Decryption** Work :
-
-![ECB-mode-encryption-and-decryption](https://github.com/mnm-an/Ctf-Writeups/assets/65871533/c461c1e0-2fc9-4e90-b409-550804de673a)
-
-
 **In ECB encryption, each plaintext block is independently encrypted with the same key. The encryption process involves dividing the input into fixed-size blocks (e.g., 128 bits), and each block is encrypted separately, producing its corresponding ciphertext block. This means that identical plaintext blocks will result in identical ciphertext blocks**.
 
 ### Decryption Approach :
