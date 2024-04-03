@@ -29,7 +29,7 @@ open(sys.argv[1] + ".enc", "w").write(ct)
 
 ```
 ### Analysis: 
-Upon examining encrypt.py, it was discovered that the encryption algorithm involves a series of transformations applied to the input plaintext. The algorithm is iterative, executing a loop a fixed number of times, with each iteration involving a set of operations on the data. The key operations include bitwise XOR operations and modular arithmetic.
+Upon examining encrypt.py, it was discovered that the encryption algorithm involves a series of transformations applied to the input plaintext. The algorithm is iterative.
 
 **Encryption function:**
 
@@ -39,8 +39,6 @@ The encryption function defined in encrypt.py accepts a block of data and applie
 
 To decrypt the encrypted data, a reverse-engineering approach was employed. The provided decryption function in decrypt attempts to reverse the operations applied during encryption by iteratively applying inverse operations. By carefully reversing each step of the encryption process, the original plaintext can be recovered.
 
-    Understanding the role of the F function was crucial for decrypting the data. By analyzing the F function, which involves bitwise XOR and bit shifting operations, it was possible to devise the inverse operations required for decryption.
-    Reverse-engineering the encryption algorithm required careful analysis of the operations applied at each iteration of the encryption loop. By understanding the sequence of operations, it became possible to devise a strategy for reversing these operations during decryption.
 
 #### `decrypt.py`:
 ```python
