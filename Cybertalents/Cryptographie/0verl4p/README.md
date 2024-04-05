@@ -40,7 +40,7 @@ print("- Encrypted DATA",cipher)
 
 ```
 ### Decryption Approach : 
-The decryption approach involves iteratively reversing the RSA encryption process. It begins by initializing the given parameters such as the public exponent and RSA key list. The decryption proceeds by computing the inverse of each key's public exponent modulo kph, the value of kph was computed as (e * d) - 1, then using it to decrypt the ciphertext. This process is repeated for each key in the reversed list until the plaintext is obtained. Finally, the decrypted ciphertext is converted back to plaintext, successfully revealing the original message.
+The decryption approach involves iteratively reversing the RSA encryption process. It begins by initializing the given parameters such as the public exponent and RSA key list. The decryption proceeds by computing the inverse of each key's public exponent modulo kph, the value of kph was computed as `(e * d) - 1`, then using it to decrypt the ciphertext. This process is repeated for each key in the reversed list until the initial cipher is obtained . the initial cipher was converted back to plaintext using the `long_to_bytes` function ,successfully revealing the original message.
 ### `solve.py`:
 
 ```python
